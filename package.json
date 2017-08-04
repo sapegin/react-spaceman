@@ -1,0 +1,26 @@
+{
+  "name": "react-spaceman",
+  "version": "1.0.0",
+  "description": "",
+  "author": {
+    "name": "Artem Sapegin",
+    "url": "http://sapegin.me"
+  },
+  "homepage": "https://github.com/sapegin/react-spaceman",
+  "repository": "sapegin/react-spaceman",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "pretest": "tsc --noEmit"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "typescript": "^2.4.2"
+  }
+}
