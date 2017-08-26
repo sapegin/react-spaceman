@@ -1,7 +1,7 @@
 {
   "name": "react-spaceman",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "React component to manage whitespace",
   "author": {
     "name": "Artem Sapegin",
     "url": "http://sapegin.me"
@@ -12,15 +12,38 @@
   "engines": {
     "node": ">=4"
   },
-  "main": "index.js",
+  "main": "lib/Panel.js",
   "files": [
-    "index.js"
+    "lib"
   ],
   "scripts": {
-    "pretest": "tsc --noEmit"
+    "test": "tsc --noEmit",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "start": "styleguidist server",
+    "build": "tsc --outDir lib",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "white",
+    "space",
+    "whitespace",
+    "margin",
+    "padding"
+  ],
   "devDependencies": {
-    "typescript": "^2.4.2"
+    "@types/react": "^16.0.4",
+    "@types/react-dom": "^15.5.4",
+    "jss": "^8.1.0",
+    "jss-preset-default": "^3.0.0",
+    "react-docgen-typescript": "^1.0.0",
+    "react-styleguidist": "^6.0.20",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5",
+    "webpack-blocks": "^1.0.0-beta.3"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }

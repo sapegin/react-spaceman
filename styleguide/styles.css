@@ -1,0 +1,73 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+.hl [class*="rspcmn-i-"],
+.hl [class*="rspcmn-s-"],
+.hl-inside [class*="rspcmn-"] [class*="rspcmn-i-"],
+.hl-inside [class*="rspcmn-"] [class*="rspcmn-s-"] {
+	background-color: #def2fb;
+}
+
+.hl [class*="rspcmn-x-"],
+.hl [class*="rspcmn-y-"],
+.hl-inside [class*="rspcmn-"] [class*="rspcmn-x-"],
+.hl-inside [class*="rspcmn-"] [class*="rspcmn-y-"] {
+	background-color: #e3fbe9;
+}
+
+[class*="rspcmn-"] samp {
+	display: block;
+	height: 32px;
+	padding: 0 8px;
+	line-height: 32px;
+	text-align: center;
+	color: #666;
+	background-color: #f9f9f9;
+}
+
+[class*="rspcmn-"] bold {
+	font-weight: normal;
+	color: #666;
+	background-color: #f9f9f9;
+}
+
+[class*="rspcmn-"] img {
+	display: block;
+}
+
+.help[class*="rspcmn-"] {
+	background-color: white;
+}
+
+.help-swatch {
+	display: inline-block;
+	vertical-align: middle;
+	width: 17px;
+	height: 17px;
+	margin-top: -5px;
+}
+
+.help-content {
+	background-color: #f9f9f9;
+}
+
+.help-padding {
+	background-color: #e3fbe9;
+}
+
+.help-margin {
+	background-color: #def2fb;
+}
