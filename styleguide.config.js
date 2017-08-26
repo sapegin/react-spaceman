@@ -23,4 +23,5 @@ module.exports = {
 	getComponentPathLine: componentName => `import Panel from 'react-spaceman';`,
 	showUsage: true,
 	showSidebar: false,
+	styleguideDir: path.join(__dirname, 'styleguide-build'),
 };

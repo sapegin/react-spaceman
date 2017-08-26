@@ -22,6 +22,7 @@
     "styleguide:build": "styleguidist build",
     "start": "styleguidist server",
     "build": "tsc --outDir lib",
+    "deploy": "gh-pages -d styleguide-build",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -34,6 +35,7 @@
   "devDependencies": {
     "@types/react": "^16.0.4",
     "@types/react-dom": "^15.5.4",
+    "gh-pages": "^1.0.0",
     "jss": "^8.1.0",
     "jss-preset-default": "^3.0.0",
     "react-docgen-typescript": "^1.0.0",

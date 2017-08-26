@@ -1,4 +1,5 @@
 node_modules/
+styleguide-build/
 .DS_Store
 Thumbs.db
 .idea/
