@@ -1,0 +1,9 @@
+{
+  "extends": "tamia/react",
+  "parser": "typescript-eslint-parser",
+  "rules": {
+    "no-undef": 0,
+    "no-unused-vars": 0,
+    "no-useless-constructor": 0
+  }
+}

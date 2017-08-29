@@ -23,7 +23,9 @@
     "start": "styleguidist server",
     "build": "tsc --outDir lib",
     "deploy": "gh-pages -d styleguide-build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --cache --fix --ext .{ts,tsx}",
+    "pretest": "npm run lint"
   },
   "keywords": [
     "white",
@@ -35,12 +37,18 @@
   "devDependencies": {
     "@types/react": "^16.0.4",
     "@types/react-dom": "^15.5.4",
+    "eslint": "^4.5.0",
+    "eslint-config-tamia": "^4.2.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-react": "^7.3.0",
     "gh-pages": "^1.0.0",
     "jss": "^8.1.0",
     "jss-preset-default": "^3.0.0",
+    "prettier": "^1.6.0",
     "react-docgen-typescript": "^1.0.0",
     "react-styleguidist": "^6.0.20",
     "typescript": "^2.4.2",
+    "typescript-eslint-parser": "^7.0.0",
     "webpack": "^3.5.5",
     "webpack-blocks": "^1.0.0-beta.3"
   },

@@ -4,9 +4,9 @@ const prefix = 'rspcmn';
 
 let notAttachedCss = '';
 
-export type ClassMap = { [index: string] : string };
+export type ClassMap = { [index: string]: string };
 
-export function addClass(elem : string, fn: (name: string) => string) : string {
+export function addClass(elem: string, fn: (name: string) => string): string {
 	const name = `${prefix}-${elem}`;
 	const css = fn(`.${name}`);
 
@@ -15,14 +15,16 @@ export function addClass(elem : string, fn: (name: string) => string) : string {
 	return name;
 }
 
-export function addClassesForAllSizes(elem : string, fn: (name: string, value: number, size: string) => string) : ClassMap {
-	const classes : ClassMap = {};
-	const css = Sizes.map(
-		({ size, value }) => {
-			const name = `${prefix}-${elem}-${size}`;
-			classes[size] = name;
-			return fn(`.${name}`, value, size);
-		}).join('\n');
+export function addClassesForAllSizes(
+	elem: string,
+	fn: (name: string, value: number, size: string) => string
+): ClassMap {
+	const classes: ClassMap = {};
+	const css = Sizes.map(({ size, value }) => {
+		const name = `${prefix}-${elem}-${size}`;
+		classes[size] = name;
+		return fn(`.${name}`, value, size);
+	}).join('\n');
 
 	notAttachedCss += `${css}\n`;
 

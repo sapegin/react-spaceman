@@ -10,16 +10,11 @@ module.exports = {
 		},
 	],
 	propsParser: require('react-docgen-typescript').parse,
-	require: [
-		path.join(__dirname, 'styleguide/styles.css'),
-	],
+	require: [path.join(__dirname, 'styleguide/styles.css')],
 	context: {
 		jss: path.join(__dirname, 'styleguide/jss.js'),
 	},
-	webpackConfig: createConfig([
-		css(),
-		typescript(),
-	]),
+	webpackConfig: createConfig([css(), typescript()]),
 	getComponentPathLine: componentName => `import Panel from 'react-spaceman';`,
 	showUsage: true,
 	showSidebar: false,

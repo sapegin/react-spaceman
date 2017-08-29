@@ -1,6 +1,6 @@
 interface ISizeItem {
-	size: string;
-	value: number;
+	size: string,
+	value: number,
 }
 
 export const Sizes: ISizeItem[] = [
