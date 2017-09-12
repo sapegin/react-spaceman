@@ -17,7 +17,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "tsc --noEmit",
+    "test": "tsc --noEmit && npm run test:jest",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "start": "styleguidist server",
@@ -25,7 +25,10 @@
     "deploy": "gh-pages -d styleguide-build",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --cache --fix --ext .{ts,tsx}",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "test:jest": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "white",
@@ -35,25 +38,52 @@
     "padding"
   ],
   "devDependencies": {
-    "@types/react": "^16.0.4",
+    "@types/enzyme": "^2.8.7",
+    "@types/jest": "^20.0.8",
+    "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
     "eslint": "^4.5.0",
     "eslint-config-tamia": "^4.2.0",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "^7.3.0",
     "gh-pages": "^1.0.0",
+    "jest": "^21.0.2",
     "jss": "^8.1.0",
     "jss-preset-default": "^3.0.0",
     "prettier": "^1.6.0",
-    "react-docgen-typescript": "^1.0.0",
-    "react-styleguidist": "^6.0.20",
+    "react-docgen-typescript": "^1.0.2",
+    "react-styleguidist": "^6.0.24",
+    "react-test-renderer": "^15.6.1",
+    "ts-jest": "^21.0.0",
     "typescript": "^2.4.2",
     "typescript-eslint-parser": "^7.0.0",
-    "webpack": "^3.5.5",
-    "webpack-blocks": "^1.0.0-beta.3"
+    "webpack": "^3.5.6",
+    "webpack-blocks": "^1.0.0-beta.4"
   },
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/lib/"
+    ],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
   }
 }

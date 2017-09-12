@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel should add a class for margin between children 1`] = `
+<div
+  className="rspcmn-s-m"
+>
+  <div>
+    ein
+  </div>
+  <div>
+    zwei
+  </div>
+  <div>
+    polizei
+  </div>
+</div>
+`;
+
+exports[`Panel should add a class for margin between inline children 1`] = `
+<span
+  className="rspcmn-i rspcmn-i-m"
+>
+  <span>
+    ein
+  </span>
+  <span>
+    zwei
+  </span>
+  <span>
+    polizei
+  </span>
+</span>
+`;
+
+exports[`Panel should pass props to a custom tag 1`] = `
+<header
+  className=""
+  id="pizza"
+>
+  hello
+</header>
+`;
+
+exports[`Panel should render a custom tag 1`] = `
+<header
+  className=""
+>
+  hello
+</header>
+`;
+
+exports[`Panel should render a div 1`] = `
+<div
+  className=""
+>
+  hello
+</div>
+`;
