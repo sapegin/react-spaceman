@@ -1,5 +1,7 @@
 # React Spaceman
 
+[![Build Status](https://travis-ci.org/sapegin/react-spaceman.svg)](https://travis-ci.org/sapegin/react-spaceman)
+
 React component to manage whitespace.
 
 *Inspired by Nathan Curtis’ article [Space in Design Systems](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62).*
