@@ -29,7 +29,11 @@ describe('Panel', () => {
 	});
 
 	it('should add a class for squished padding', () => {
-		const wrapper = shallow(<Panel inset="m" squish>hello</Panel>);
+		const wrapper = shallow(
+			<Panel inset="m" squish>
+				hello
+			</Panel>
+		);
 		expect(wrapper.prop('className')).toBe('rspcmn-x-m rspcmn-y-s');
 	});
 
@@ -56,7 +60,11 @@ describe('Panel', () => {
 	});
 
 	it('should add a custom class name', () => {
-		const wrapper = shallow(<Panel below="m" className="pizza">hello</Panel>);
+		const wrapper = shallow(
+			<Panel below="m" className="pizza">
+				hello
+			</Panel>
+		);
 		expect(wrapper.prop('className')).toBe('pizza rspcmn-b-m');
 	});
 
@@ -66,8 +74,11 @@ describe('Panel', () => {
 	});
 
 	it('should pass props to a custom tag', () => {
-		const wrapper = shallow(<Panel tag="header" tagProps={{ id: 'pizza' }}>hello</Panel>);
+		const wrapper = shallow(
+			<Panel tag="header" tagProps={{ id: 'pizza' }}>
+				hello
+			</Panel>
+		);
 		expect(wrapper).toMatchSnapshot();
 	});
-
 });
