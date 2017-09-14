@@ -31,3 +31,13 @@ exports[`enhance returned function should render a div 1`] = `
   hello
 </Panel>
 `;
+
+exports[`enhance returned function should set default Spaceman props 1`] = `
+<Panel
+  below="m"
+  tag="div"
+  tagProps={Object {}}
+>
+  hello
+</Panel>
+`;
