@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enhance returned function should accept Spaceman props 1`] = `
+<Panel
+  below="m"
+  tag="div"
+  tagProps={Object {}}
+>
+  hello
+</Panel>
+`;
+
+exports[`enhance returned function should pass extra props to a div 1`] = `
+<Panel
+  tag="div"
+  tagProps={
+    Object {
+      "id": "pizza",
+    }
+  }
+>
+  hello
+</Panel>
+`;
+
+exports[`enhance returned function should render a div 1`] = `
+<Panel
+  tag="div"
+  tagProps={Object {}}
+>
+  hello
+</Panel>
+`;
