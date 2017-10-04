@@ -94,6 +94,21 @@ Horizontal margin between:
 </Panel>
 ```
 
+### Enhancing existing components
+
+This way you won’t need to use `tagProps` and you could define default whitespace values.
+
+```jsx { "props": { "className": "hl-inside" } }
+// import { spaceman } from 'react-spaceman';
+const HeaderBase = ({ children }) => <header><samp>{children}</samp></header>;
+const Header = spaceman(Header, { below: 'm' });
+
+<div>
+  <Header>Default margin bottom</Header>
+  <Header below="l">Custom margin bottom</Header>
+</div>
+```
+
 ### Examples
 
 ```jsx

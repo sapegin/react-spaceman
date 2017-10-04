@@ -10,7 +10,10 @@ module.exports = {
 		},
 	],
 	propsParser: require('react-docgen-typescript').parse,
-	require: [path.join(__dirname, 'styleguide/styles.css')],
+	require: [
+		path.join(__dirname, 'styleguide/styles.css'),
+		path.join(__dirname, 'styleguide/setup.ts'),
+	],
 	context: {
 		jss: path.join(__dirname, 'styleguide/jss.js'),
 	},
