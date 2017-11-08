@@ -8,5 +8,6 @@ Thumbs.db
 *.sublime-workspace
 *.log
 .eslintcache
+Changelog.md
 lib/
 coverage/
