@@ -1,4 +1,4 @@
-interface ISizeItem {
+export interface ISizeItem {
 	size: string,
 	value: number,
 }

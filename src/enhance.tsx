@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Size } from './consts';
 import { Panel } from './Panel';
 
-interface IProps {
+export interface IProps {
 	below?: Size,
 	inset?: Size,
 	x?: Size,
@@ -15,7 +15,7 @@ interface IProps {
 	[key: string]: any,
 }
 
-interface IDefaults {
+export interface IDefaults {
 	below?: Size,
 	inset?: Size,
 	x?: Size,
