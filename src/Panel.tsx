@@ -45,7 +45,7 @@ const stackClasses = addClassesForAllSizes(
 
 attachAllStyles();
 
-interface IProps {
+export interface IProps {
 	below?: Size,
 	inset?: Size,
 	x?: Size,
