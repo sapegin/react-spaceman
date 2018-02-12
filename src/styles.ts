@@ -32,20 +32,22 @@ export function addClassesForAllSizes(
 }
 
 export function attachAllStyles() {
-	if (typeof document !== 'undefined') {
-		// Create <style> element
-		const element = document.createElement('style');
-		element.type = 'text/css';
-		element.setAttribute('data-meta', prefix);
-		element.textContent = notAttachedCss;
-
-		// Add to the DOM
-		const container = document.querySelector('head');
-		if (!container) {
-			throw new Error('<head> tag not found');
-		}
-		container.appendChild(element);
-
-		notAttachedCss = '';
+	if (typeof document === 'undefined') {
+		return;
 	}
+
+	// Create <style> element
+	const element = document.createElement('style');
+	element.type = 'text/css';
+	element.setAttribute('data-meta', prefix);
+	element.textContent = notAttachedCss;
+
+	// Add to the DOM
+	const container = document.querySelector('head');
+	if (!container) {
+		throw new Error('<head> tag not found');
+	}
+	container.appendChild(element);
+
+	notAttachedCss = '';
 }
