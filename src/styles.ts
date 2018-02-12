@@ -32,6 +32,10 @@ export function addClassesForAllSizes(
 }
 
 export function attachAllStyles() {
+	if (typeof document === 'undefined') {
+		return;
+	}
+
 	// Create <style> element
 	const element = document.createElement('style');
 	element.type = 'text/css';
